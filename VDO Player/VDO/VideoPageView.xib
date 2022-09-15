@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoPageView" customModule="VDO_Player" customModuleProvider="target">
+            <connections>
+                <outlet property="btnPlay" destination="XYF-1j-heJ" id="ghe-Wd-oX5"/>
+                <outlet property="containerView" destination="i5M-Pr-FkT" id="46U-Rs-Shz"/>
+                <outlet property="videoView" destination="K5V-kY-AYQ" id="4MC-KU-hgJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5V-kY-AYQ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYF-1j-heJ">
+                            <rect key="frame" x="145" y="269" width="30" height="30"/>
+                            <color key="backgroundColor" systemColor="linkColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="5pM-ir-SCn"/>
+                                <constraint firstAttribute="height" constant="30" id="BT2-kh-MN3"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="playpause.fill" catalog="system">
+                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="onClickedPlay:" destination="-1" eventType="touchUpInside" id="Obi-3G-15G"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="XYF-1j-heJ" firstAttribute="centerX" secondItem="K5V-kY-AYQ" secondAttribute="centerX" id="MRC-9A-SsH"/>
+                        <constraint firstItem="XYF-1j-heJ" firstAttribute="centerY" secondItem="K5V-kY-AYQ" secondAttribute="centerY" id="qgy-kE-BzH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="K5V-kY-AYQ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6ks-E8-b92"/>
+                <constraint firstItem="K5V-kY-AYQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="PTP-qZ-VSI"/>
+                <constraint firstItem="K5V-kY-AYQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kfL-AG-oKl"/>
+                <constraint firstItem="K5V-kY-AYQ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="oqu-qG-i5q"/>
+            </constraints>
+            <point key="canvasLocation" x="131.25" y="86.619718309859152"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="playpause.fill" catalog="system" width="128" height="70"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
